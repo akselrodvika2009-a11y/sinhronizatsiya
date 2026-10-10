@@ -1,0 +1,70 @@
+/* Layout */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-planet {
+  position: relative;
+  margin-top: 40px;
+}
+
+.match {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.outfits {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+.outfit-item {
+  text-align: center;
+  max-width: 200px;
+}
+
+.rules {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.rules-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.rule {
+  max-width: 180px;
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 40px 20px 80px;
+}
+
+.contact {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .outfits,
+  .rules-grid,
+  .contacts {
+    gap: 30px;
+  }
+}
