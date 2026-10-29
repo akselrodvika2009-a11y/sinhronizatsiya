@@ -12,30 +12,44 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
+  <!-- Обёртка всей страницы -->
   <div class="page">
 
+    <!-- Шапка: логотип ЛБЛ справа -->
     <header class="top-bar">
-      <img src="assets/logo.png" alt="ЛБЛ" class="logo">
+      <span class="logo-text">ЛБЛ</span>
     </header>
 
+    <!--
+      Герой-блок
+      Заголовок крупный на весь экран, планета-сердце справа
+      поверх нижней части заголовка, как в Figma
+    -->
     <section class="hero">
-      <div class="hero-left">
-        <h1 class="hero-title">
-          <span>СИНХРО</span>
-          <span>НИЗАЦИЯ</span>
-        </h1>
+      <h1 class="hero-title">
+        <span class="hero-title-line">СИНХРО</span>
+        <span class="hero-title-line">НИЗАЦИЯ</span>
+      </h1>
+
+      <!-- Планета-сердце -->
+      <div class="hero-planet">
+        <img src="assets/heart.png" alt="Планета-сердце" class="hero-heart">
+      </div>
+
+      <!-- Текст и кнопка слева -->
+      <div class="hero-content">
         <p class="hero-tagline">
           Косая. Встреча.<br>
           Шёпот. Судьба.<br>
           Любовь. Навсегда.
         </p>
+        <!-- Кнопка скроллит вниз к контактам -->
         <a href="#contacts" class="btn-primary">НАЙТИ ЛЮБОВЬ</a>
-      </div>
-      <div class="hero-right">
-        <img src="assets/heart.png" alt="Планета-сердце" class="hero-heart">
       </div>
     </section>
 
+    <!-- Блок про концерт -->
     <section class="concert">
       <h2 class="concert-title">
         Концерт, где ты гарантировано<br>
@@ -47,28 +61,40 @@
       </p>
     </section>
 
+    <!--
+      Таймлайн вечера
+      Три этапа: 19:00 / 21:00 / 23:00
+      Линия между иконками
+    -->
     <section class="timeline">
       <div class="timeline-track">
         <div class="timeline-item">
-          <img src="assets/timeline-1.png" alt="19:00">
+          <img src="assets/timeline-1.png" alt="19:00 — приход">
           <span class="timeline-time">19:00</span>
         </div>
         <div class="timeline-item">
-          <img src="assets/timeline-2.png" alt="21:00">
+          <img src="assets/timeline-2.png" alt="21:00 — веселье">
           <span class="timeline-time">21:00</span>
         </div>
         <div class="timeline-item">
-          <img src="assets/timeline-3.png" alt="23:00">
+          <img src="assets/timeline-3.png" alt="23:00 — пара">
           <span class="timeline-time">23:00</span>
         </div>
       </div>
     </section>
 
+    <!--
+      Дресс-код
+      Три варианта одежды: удобное / необычное / базовое
+    -->
     <section class="dresscode">
-      <h2 class="section-title">ДРЕСС КОД</h2>
-      <p class="section-sub">
-        Надень самую любимую и удобную одежду, важен только цвет
-      </p>
+      <div class="dresscode-header">
+        <h2 class="section-title">ДРЕСС КОД</h2>
+        <p class="section-sub">
+          Надень самую любимую и удобную<br>
+          одежду, важен только цвет
+        </p>
+      </div>
       <div class="dress-grid">
         <div class="dress-item">
           <img class="dress-img" src="assets/dress-1.png" alt="что-то удобное">
@@ -85,27 +111,34 @@
       </div>
     </section>
 
+    <!--
+      Правила входа на концерт
+      01 — свободное сердце
+      02 — вера в судьбу
+      03 — готовность веселиться
+    -->
     <section class="rules">
       <h2 class="section-title">ПРАВИЛА</h2>
       <div class="rules-grid">
         <div class="rule-item">
           <span class="rule-num">01/</span>
-          <p class="rule-text">твоё сердечко свободно</p>
+          <p class="rule-text">твоё<br>сердечко<br>свободно</p>
           <img src="assets/rule-1.png" alt="Правило 1">
         </div>
         <div class="rule-item">
           <span class="rule-num">02/</span>
-          <p class="rule-text">веришь в судьбу</p>
+          <p class="rule-text">веришь в<br>судьбу</p>
           <img src="assets/rule-2.png" alt="Правило 2">
         </div>
         <div class="rule-item">
           <span class="rule-num">03/</span>
-          <p class="rule-text">ты готов веселиться</p>
+          <p class="rule-text">ты готов<br>веселиться</p>
           <img src="assets/rule-3.png" alt="Правило 3">
         </div>
       </div>
     </section>
 
+    <!-- Контакты: инст, телефон, телеграм -->
     <section class="contacts" id="contacts">
       <div class="contacts-grid">
         <div class="contact-item">
