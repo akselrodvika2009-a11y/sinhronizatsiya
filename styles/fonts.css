@@ -1,3 +1,12 @@
 :root {
   --font-main: "Montserrat", sans-serif;
+  --pink: #ff69b4;
+  --pink-bright: #ff4da6;
+  --pink-light: #ff9ec8;
+  --pink-dark: #c2185b;
+  --magenta: #e91e8c;
+  --bg: #0a0a12;
+  --white: #ffffff;
+  --white-muted: rgba(255, 255, 255, 0.7);
+  --white-dim: rgba(255, 255, 255, 0.45);
 }
