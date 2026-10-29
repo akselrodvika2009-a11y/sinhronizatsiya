@@ -1,14 +1,62 @@
-/* Шрифт и цвета */
+/*
+  Шрифт Montserrat + цветовая система
+  Иерархия кеглей и интерлиньяжа
+*/
 
 :root {
   --font-main: "Montserrat", system-ui, -apple-system, sans-serif;
+
+  /* Цвета набора */
   --pink: #ff69b4;
-  --pink-bright: #ff4da6;
-  --pink-light: #ff9ec8;
-  --pink-dark: #c2185b;
-  --magenta: #c2185b;
-  --bg: #000000;
+  --pink-soft: #ff9ec8;
   --white: #ffffff;
+  --white-90: rgba(255, 255, 255, 0.9);
+  --white-75: rgba(255, 255, 255, 0.75);
+  --white-55: rgba(255, 255, 255, 0.55);
+  --black: #000000;
+
+  /*
+    Модуль отступов (8px)
+    Используется для margins / paddings
+  */
+  --s-1: 8px;
+  --s-2: 16px;
+  --s-3: 24px;
+  --s-4: 32px;
+  --s-5: 40px;
+  --s-6: 48px;
+  --s-8: 64px;
+  --s-10: 80px;
+  --s-12: 96px;
+  --s-16: 128px;
+
+  /*
+    Типографическая шкала
+    H1 / H2 / lead / body / caption
+  */
+  --fs-h1: clamp(64px, 11vw, 160px);
+  --lh-h1: 0.88;
+  --ls-h1: -0.03em;
+
+  --fs-h2: clamp(40px, 5vw, 64px);
+  --lh-h2: 1.05;
+  --ls-h2: 0.02em;
+
+  --fs-lead: clamp(26px, 3.2vw, 40px);
+  --lh-lead: 1.35;
+
+  --fs-body: 16px;
+  --lh-body: 1.55;
+
+  --fs-caption: 15px;
+  --lh-caption: 1.5;
+
+  --fs-small: 14px;
+  --lh-small: 1.45;
+
+  /* Максимальная длина строки (~60–75 знаков) */
+  --measure: 36em;
+  --measure-narrow: 28em;
 }
 
 html,
