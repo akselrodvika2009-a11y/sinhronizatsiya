@@ -1,6 +1,6 @@
 /*
   Сайт «Синхронизация»
-  Вёрстка по макету Figma + правила ритма текста
+  Фон: чёрный + звёзды (круги), как Star Generator в Figma
 */
 
 *,
@@ -15,29 +15,67 @@ body {
   font-size: var(--fs-body);
   line-height: var(--lh-body);
   font-weight: 400;
-  background-color: var(--black);
-  background-image: url("../assets/bg.jpg");
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-color: #000;
   color: var(--white);
   overflow-x: hidden;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  position: relative;
 }
 
-/* Полоса набора страницы */
+/* Слой звёзд — круги разного размера на чёрном фоне */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #000;
+  background-image:
+    radial-gradient(1.5px 1.5px at 8% 12%, #fff, transparent),
+    radial-gradient(1px 1px at 18% 28%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(2px 2px at 32% 8%, #fff, transparent),
+    radial-gradient(1px 1px at 45% 22%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1.5px 1.5px at 58% 15%, #fff, transparent),
+    radial-gradient(1px 1px at 72% 30%, rgba(255,255,255,0.85), transparent),
+    radial-gradient(2px 2px at 85% 10%, #fff, transparent),
+    radial-gradient(1px 1px at 92% 25%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 12% 48%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1.5px 1.5px at 25% 55%, #fff, transparent),
+    radial-gradient(1px 1px at 40% 42%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 55% 60%, #fff, transparent),
+    radial-gradient(1px 1px at 68% 45%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1.5px 1.5px at 80% 52%, #fff, transparent),
+    radial-gradient(1px 1px at 95% 40%, rgba(255,255,255,0.65), transparent),
+    radial-gradient(1px 1px at 5% 72%, rgba(255,255,255,0.75), transparent),
+    radial-gradient(2px 2px at 20% 80%, #fff, transparent),
+    radial-gradient(1px 1px at 35% 68%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1.5px 1.5px at 50% 85%, #fff, transparent),
+    radial-gradient(1px 1px at 65% 75%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 78% 88%, #fff, transparent),
+    radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,0.85), transparent),
+    radial-gradient(1px 1px at 15% 95%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1.5px 1.5px at 42% 92%, #fff, transparent),
+    radial-gradient(1px 1px at 60% 98%, rgba(255,255,255,0.75), transparent),
+    radial-gradient(1px 1px at 88% 95%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 3% 35%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 48% 5%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1.5px 1.5px at 70% 18%, #fff, transparent),
+    radial-gradient(1px 1px at 28% 38%, rgba(255,255,255,0.65), transparent);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 .page {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 5vw var(--s-16);
+  position: relative;
+  z-index: 1;
 }
 
-/* ===== Шапка ===== */
 .top-bar {
   display: flex;
   justify-content: flex-end;
@@ -55,10 +93,6 @@ body {
   text-transform: uppercase;
 }
 
-/*
-  ===== Герой =====
-  H1 — самый крупный уровень иерархии
-*/
 .hero {
   position: relative;
   min-height: 100vh;
@@ -82,9 +116,7 @@ body {
   max-width: 90%;
 }
 
-.hero-title-line {
-  display: block;
-}
+.hero-title-line { display: block; }
 
 .hero-planet {
   position: absolute;
@@ -111,7 +143,6 @@ body {
   max-width: var(--measure-narrow);
 }
 
-/* Caption / lead в герое */
 .hero-tagline {
   font-size: var(--fs-caption);
   font-weight: 400;
@@ -144,10 +175,6 @@ body {
   transform: translateY(-2px);
 }
 
-/*
-  ===== Концерт =====
-  Lead-уровень: крупнее body, меньше H2
-*/
 .concert {
   text-align: center;
   padding: var(--s-16) 0 var(--s-6);
@@ -172,7 +199,6 @@ body {
   max-width: var(--measure-narrow);
 }
 
-/* ===== Таймлайн ===== */
 .timeline {
   padding: var(--s-10) 0 var(--s-12);
 }
@@ -221,10 +247,6 @@ body {
   color: var(--white-90);
 }
 
-/*
-  ===== Дресс-код =====
-  H2 + caption справа
-*/
 .dresscode {
   padding: var(--s-8) 0 var(--s-12);
 }
@@ -289,7 +311,6 @@ body {
   text-align: center;
 }
 
-/* ===== Правила ===== */
 .rules {
   padding: var(--s-8) 0 var(--s-12);
 }
@@ -339,7 +360,6 @@ body {
   margin-top: var(--s-1);
 }
 
-/* ===== Контакты ===== */
 .contacts {
   padding: var(--s-6) 0 var(--s-10);
 }
@@ -383,39 +403,17 @@ body {
   border-color: var(--pink);
 }
 
-/* ===== Адаптив ===== */
 @media (max-width: 1100px) {
-  .hero-planet {
-    width: 44%;
-    top: 20%;
-  }
-
+  .hero-planet { width: 44%; top: 20%; }
   .timeline-item img,
-  .rule-item img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .dress-img {
-    width: 200px;
-    height: 250px;
-  }
+  .rule-item img { width: 200px; height: 200px; }
+  .dress-img { width: 200px; height: 250px; }
 }
 
 @media (max-width: 800px) {
-  .page {
-    padding: 0 var(--s-3) var(--s-10);
-  }
-
-  .hero {
-    min-height: auto;
-    padding-bottom: var(--s-6);
-  }
-
-  .hero-title {
-    max-width: 100%;
-  }
-
+  .page { padding: 0 var(--s-3) var(--s-10); }
+  .hero { min-height: auto; padding-bottom: var(--s-6); }
+  .hero-title { max-width: 100%; }
   .hero-planet {
     position: relative;
     right: auto;
@@ -424,50 +422,14 @@ body {
     max-width: 340px;
     margin: var(--s-3) auto;
   }
-
-  .hero-content {
-    margin-top: 0;
-    max-width: 100%;
-  }
-
-  .dresscode-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .section-sub {
-    text-align: left;
-    max-width: none;
-  }
-
-  .timeline-item img {
-    width: 110px;
-    height: 110px;
-  }
-
-  .timeline-track::before {
-    bottom: 38px;
-  }
-
+  .hero-content { margin-top: 0; max-width: 100%; }
+  .dresscode-header { flex-direction: column; align-items: flex-start; }
+  .section-sub { text-align: left; max-width: none; }
+  .timeline-item img { width: 110px; height: 110px; }
+  .timeline-track::before { bottom: 38px; }
   .dress-grid,
-  .rules-grid {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--s-4);
-  }
-
-  .dress-img {
-    width: 150px;
-    height: 190px;
-  }
-
-  .rule-item img {
-    width: 140px;
-    height: 140px;
-  }
-
-  .contacts-grid {
-    flex-direction: column;
-    gap: var(--s-3);
-  }
+  .rules-grid { flex-wrap: wrap; justify-content: center; gap: var(--s-4); }
+  .dress-img { width: 150px; height: 190px; }
+  .rule-item img { width: 140px; height: 140px; }
+  .contacts-grid { flex-direction: column; gap: var(--s-3); }
 }
