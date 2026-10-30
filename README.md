@@ -1,35 +1,28 @@
 # Синхронизация
 
-Концерт, где ты гарантировано встретишь свою любовь.
+Одностраничный сайт для проектного семинара (основы веб-дизайна).
 
-## Сайт
+Макет: Figma  
+Вёрстка: HTML / CSS  
+Шрифт: Montserrat  
+Публикация: GitHub Pages
 
-Одностраничный лендинг с прокруткой сверху вниз.
+## Ссылки
 
-**Демо:** https://akselrodvika2009-a11y.github.io/sinhronizatsiya/
+- [Сайт](https://akselrodvika2009-a11y.github.io/sinhronizatsiya/)
+- [Figma](https://www.figma.com/design/B30vKfm8HCouqAfUA2MYiE/3-варианта-сайта)
 
 ## Структура
 
 ```
-├── assets/          # картинки (нужно загрузить)
-│   ├── heart.jpg
-│   ├── bg.jpg
-│   ├── logo.jpeg
-│   ├── timeline-1.png … timeline-3.png
-│   └── rule-1.png … rule-3.png
-├── styles/
-│   ├── reset.css
-│   ├── fonts.css
-│   └── style.css
-└── index.html
+index.html
+styles/
+  reset.css
+  fonts.css
+  style.css
+assets/
 ```
 
-Шрифт: **Montserrat** (Google Fonts).
+## Об использовании ИИ
 
-## Что сделано
-
-- Герой с планетой-сердцем и кнопкой «Найти любовь» (скролл к контактам)
-- Таймлайн 19:00 / 21:00 / 23:00
-- Дресс-код
-- Правила 01 / 02 / 03
-- Контакты: Instagram, телефон, Telegram
+ИИ использовался при вёрстке: помощь с HTML/CSS, адаптив, базовая структура блоков. Дизайн, макет в Figma, контент и визуальные решения - свои.

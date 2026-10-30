@@ -1,7 +1,4 @@
-/*
-  Сайт «Синхронизация»
-  Фон: чёрный + звёзды (круги), как Star Generator в Figma
-*/
+/* синхронизация */
 
 *,
 *::before,
@@ -20,11 +17,10 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
   position: relative;
 }
 
-/* Слой звёзд — круги разного размера на чёрном фоне */
+/* звезды на фоне */
 body::before {
   content: "";
   position: fixed;
@@ -116,7 +112,9 @@ body::before {
   max-width: 90%;
 }
 
-.hero-title-line { display: block; }
+.hero-title-line {
+  display: block;
+}
 
 .hero-planet {
   position: absolute;
@@ -199,6 +197,7 @@ body::before {
   max-width: var(--measure-narrow);
 }
 
+/* таймлайн - крупные иконки */
 .timeline {
   padding: var(--s-10) 0 var(--s-12);
 }
@@ -208,16 +207,16 @@ body::before {
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .timeline-track::before {
   content: "";
   position: absolute;
-  left: 6%;
-  right: 6%;
-  bottom: 48px;
+  left: 8%;
+  right: 8%;
+  bottom: 56px;
   height: 2px;
   background: var(--white);
   opacity: 0.9;
@@ -234,19 +233,20 @@ body::before {
 }
 
 .timeline-item img {
-  width: 280px;
-  height: 280px;
+  width: 360px;
+  height: 360px;
   object-fit: contain;
 }
 
 .timeline-time {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--white-90);
 }
 
+/* дресс код */
 .dresscode {
   padding: var(--s-8) 0 var(--s-12);
 }
@@ -284,7 +284,7 @@ body::before {
   justify-content: space-between;
   align-items: flex-end;
   gap: var(--s-4);
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -297,8 +297,8 @@ body::before {
 }
 
 .dress-img {
-  width: 260px;
-  height: 320px;
+  width: 340px;
+  height: 400px;
   object-fit: contain;
 }
 
@@ -311,6 +311,7 @@ body::before {
   text-align: center;
 }
 
+/* правила - крупные иконки */
 .rules {
   padding: var(--s-8) 0 var(--s-12);
 }
@@ -323,7 +324,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   gap: var(--s-4);
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -354,8 +355,8 @@ body::before {
 }
 
 .rule-item img {
-  width: 260px;
-  height: 260px;
+  width: 360px;
+  height: 360px;
   object-fit: contain;
   margin-top: var(--s-1);
 }
@@ -403,17 +404,45 @@ body::before {
   border-color: var(--pink);
 }
 
-@media (max-width: 1100px) {
-  .hero-planet { width: 44%; top: 20%; }
+@media (max-width: 1200px) {
   .timeline-item img,
-  .rule-item img { width: 200px; height: 200px; }
-  .dress-img { width: 200px; height: 250px; }
+  .rule-item img {
+    width: 280px;
+    height: 280px;
+  }
+  .dress-img {
+    width: 260px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-planet {
+    width: 44%;
+    top: 20%;
+  }
+  .timeline-item img,
+  .rule-item img {
+    width: 220px;
+    height: 220px;
+  }
+  .dress-img {
+    width: 200px;
+    height: 250px;
+  }
 }
 
 @media (max-width: 800px) {
-  .page { padding: 0 var(--s-3) var(--s-10); }
-  .hero { min-height: auto; padding-bottom: var(--s-6); }
-  .hero-title { max-width: 100%; }
+  .page {
+    padding: 0 var(--s-3) var(--s-10);
+  }
+  .hero {
+    min-height: auto;
+    padding-bottom: var(--s-6);
+  }
+  .hero-title {
+    max-width: 100%;
+  }
   .hero-planet {
     position: relative;
     right: auto;
@@ -422,14 +451,41 @@ body::before {
     max-width: 340px;
     margin: var(--s-3) auto;
   }
-  .hero-content { margin-top: 0; max-width: 100%; }
-  .dresscode-header { flex-direction: column; align-items: flex-start; }
-  .section-sub { text-align: left; max-width: none; }
-  .timeline-item img { width: 110px; height: 110px; }
-  .timeline-track::before { bottom: 38px; }
+  .hero-content {
+    margin-top: 0;
+    max-width: 100%;
+  }
+  .dresscode-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .section-sub {
+    text-align: left;
+    max-width: none;
+  }
+  .timeline-item img {
+    width: 120px;
+    height: 120px;
+  }
+  .timeline-track::before {
+    bottom: 40px;
+  }
   .dress-grid,
-  .rules-grid { flex-wrap: wrap; justify-content: center; gap: var(--s-4); }
-  .dress-img { width: 150px; height: 190px; }
-  .rule-item img { width: 140px; height: 140px; }
-  .contacts-grid { flex-direction: column; gap: var(--s-3); }
+  .rules-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--s-4);
+  }
+  .dress-img {
+    width: 160px;
+    height: 200px;
+  }
+  .rule-item img {
+    width: 150px;
+    height: 150px;
+  }
+  .contacts-grid {
+    flex-direction: column;
+    gap: var(--s-3);
+  }
 }
