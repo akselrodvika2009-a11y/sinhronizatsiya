@@ -20,7 +20,6 @@ body {
   position: relative;
 }
 
-/* звезды на фоне */
 body::before {
   content: "";
   position: fixed;
@@ -80,13 +79,11 @@ body::before {
   z-index: 20;
 }
 
-.logo-text {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  line-height: 1;
-  color: var(--white-90);
-  text-transform: uppercase;
+/* логотип 4 круга */
+.logo {
+  width: 48px;
+  height: 48px;
+  display: block;
 }
 
 .hero {
@@ -197,7 +194,6 @@ body::before {
   max-width: var(--measure-narrow);
 }
 
-/* таймлайн - крупные иконки */
 .timeline {
   padding: var(--s-10) 0 var(--s-12);
 }
@@ -246,7 +242,6 @@ body::before {
   color: var(--white-90);
 }
 
-/* дресс код */
 .dresscode {
   padding: var(--s-8) 0 var(--s-12);
 }
@@ -311,7 +306,6 @@ body::before {
   text-align: center;
 }
 
-/* правила - крупные иконки */
 .rules {
   padding: var(--s-8) 0 var(--s-12);
 }
@@ -406,43 +400,21 @@ body::before {
 
 @media (max-width: 1200px) {
   .timeline-item img,
-  .rule-item img {
-    width: 280px;
-    height: 280px;
-  }
-  .dress-img {
-    width: 260px;
-    height: 320px;
-  }
+  .rule-item img { width: 280px; height: 280px; }
+  .dress-img { width: 260px; height: 320px; }
 }
 
 @media (max-width: 1100px) {
-  .hero-planet {
-    width: 44%;
-    top: 20%;
-  }
+  .hero-planet { width: 44%; top: 20%; }
   .timeline-item img,
-  .rule-item img {
-    width: 220px;
-    height: 220px;
-  }
-  .dress-img {
-    width: 200px;
-    height: 250px;
-  }
+  .rule-item img { width: 220px; height: 220px; }
+  .dress-img { width: 200px; height: 250px; }
 }
 
 @media (max-width: 800px) {
-  .page {
-    padding: 0 var(--s-3) var(--s-10);
-  }
-  .hero {
-    min-height: auto;
-    padding-bottom: var(--s-6);
-  }
-  .hero-title {
-    max-width: 100%;
-  }
+  .page { padding: 0 var(--s-3) var(--s-10); }
+  .hero { min-height: auto; padding-bottom: var(--s-6); }
+  .hero-title { max-width: 100%; }
   .hero-planet {
     position: relative;
     right: auto;
@@ -451,41 +423,14 @@ body::before {
     max-width: 340px;
     margin: var(--s-3) auto;
   }
-  .hero-content {
-    margin-top: 0;
-    max-width: 100%;
-  }
-  .dresscode-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .section-sub {
-    text-align: left;
-    max-width: none;
-  }
-  .timeline-item img {
-    width: 120px;
-    height: 120px;
-  }
-  .timeline-track::before {
-    bottom: 40px;
-  }
+  .hero-content { margin-top: 0; max-width: 100%; }
+  .dresscode-header { flex-direction: column; align-items: flex-start; }
+  .section-sub { text-align: left; max-width: none; }
+  .timeline-item img { width: 120px; height: 120px; }
+  .timeline-track::before { bottom: 40px; }
   .dress-grid,
-  .rules-grid {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--s-4);
-  }
-  .dress-img {
-    width: 160px;
-    height: 200px;
-  }
-  .rule-item img {
-    width: 150px;
-    height: 150px;
-  }
-  .contacts-grid {
-    flex-direction: column;
-    gap: var(--s-3);
-  }
+  .rules-grid { flex-wrap: wrap; justify-content: center; gap: var(--s-4); }
+  .dress-img { width: 160px; height: 200px; }
+  .rule-item img { width: 150px; height: 150px; }
+  .contacts-grid { flex-direction: column; gap: var(--s-3); }
 }
